@@ -30,18 +30,19 @@ a {
 
 button,
 .button {
-  background: $secondary;
+  background: transparent;
   color: $white;
   padding: 0.3em 0.6em;
   outline: 0;
   border: none;
-  @include border-radius(12px);
+  @include border-radius(5px);
 
   &:hover {
     color: $white;
     background: $secondaryLight;
   }
 }
+
 
 /*Player Styles*/
 
@@ -69,12 +70,24 @@ button,
     height: 10px;
 }
 
+.all-controls {
+  display: none;
+}
+
 .jp-gui {
   position: absolute;
   bottom: 0;
   width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(204,204,204,0.6);
+}
+
+.fa-play-circle-o {
+  color: $marsala;
+  position: absolute;
+  top: 36%;
+  right: 40%;
+  display: inherit;
 }
 
 .fa-pause {

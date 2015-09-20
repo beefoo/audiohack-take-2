@@ -21,14 +21,14 @@ a {
 
 button,
 .button {
-  background: #B9E5DA;
+  background: transparent;
   color: #fff;
   padding: 0.3em 0.6em;
   outline: 0;
   border: none;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  border-radius: 12px; }
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
   button:hover,
   .button:hover {
     color: #fff;
@@ -55,12 +55,24 @@ button,
   background-color: #8C3944;
   height: 10px; }
 
+.all-controls {
+  display: none; }
+
 .jp-gui {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(204, 204, 204, 0.6); }
+
+.fa-play-circle-o {
+  color: #8C3944;
+  position: absolute;
+  top: 36%;
+  right: 40%;
+  display: inherit; }
+  .fa-play-circle-o:hover {
+    background: none; }
 
 .fa-pause {
   display: none; }
