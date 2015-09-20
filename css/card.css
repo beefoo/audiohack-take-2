@@ -1,0 +1,22 @@
+.jp-audio {
+	width: 80%;
+    background-color: black;
+    height: 100px;
+    padding: 10px;
+}
+
+.jp-progress {
+	background-color: white;
+    width: 100%;
+    height: 10px;
+}
+
+.jp-seek-bar {
+	background-color: red;
+    width: 10px;
+    height: 10px;
+}
+
+.jp-volume-max {
+	display: none;
+}
