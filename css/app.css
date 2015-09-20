@@ -1,11 +1,24 @@
 /* Palette */
 /* Site colors */
 /* Breakpoints */
-@import url(../css/vendor/normalize.css);
+@import url(/css/vendor/normalize.css);
+@import url(/css/vendor/font-awesome.min.css);
 @import url(/css/vendor/font.css);
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
 body {
   font-family: "simplifica", sans-serif;
-  background: #FFF7EB; }
+  background: #def3ee; }
 
 p {
   font-size: 1.2em;
@@ -21,14 +34,14 @@ a {
 
 button,
 .button {
-  background: #B9E5DA;
+  background: transparent;
   color: #fff;
   padding: 0.3em 0.6em;
   outline: 0;
   border: none;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  border-radius: 12px; }
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
   button:hover,
   .button:hover {
     color: #fff;
@@ -55,12 +68,24 @@ button,
   background-color: #8C3944;
   height: 10px; }
 
+.all-controls {
+  display: none; }
+
 .jp-gui {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(204, 204, 204, 0.6); }
+
+.fa-play-circle-o {
+  color: #8C3944;
+  position: absolute;
+  top: 36%;
+  right: 40%;
+  display: inherit; }
+  .fa-play-circle-o:hover {
+    background: none; }
 
 .fa-pause {
   display: none; }
@@ -73,53 +98,55 @@ form {
   font-size: 2em; }
   form input, form label {
     display: block; }
-  form label {
-    margin: 0.8em 0 0.5em; }
   form input, form textarea {
     width: 100%;
     padding: 5px; }
   form canvas {
     width: 100%;
     height: 120px; }
-  form button[type="submit"] {
-    font-size: 1.2em;
-    background: #83b573;
-    margin-top: 40px;
-    width: 540px;
-    margin-left: -30px;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-border-bottom-right-radius: 12px;
-    -webkit-border-bottom-left-radius: 12px;
-    -moz-border-radius-bottomright: 12px;
-    -moz-border-radius-bottomleft: 12px;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px; }
-    form button[type="submit"]:hover {
-      background: #a1c794; }
+
+.container {
+  margin: 20px auto;
+  max-width: 1024px;
+  padding: 0 20px; }
 
 .hide {
   display: none; }
 
-.container {
-  width: 480px;
-  margin: 10px auto;
-  padding: 30px;
-  padding-bottom: 0;
-  background: #fff;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  border-radius: 12px; }
-  .container:before, .container:after {
-    content: " ";
-    display: table; }
-  .container:after {
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-    font-size: 0; }
+.form-input-group:before, .form-input-group:after {
+  content: " ";
+  display: table; }
+.form-input-group:after {
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+  font-size: 0; }
+
+.form-label,
+.form-input {
+  float: right;
+  margin: 10px 0;
+  padding: 0; }
+
+.form-input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid;
+  float: right;
+  margin-left: 10px;
+  outline: 0;
+  width: calc(100% - 100px); }
+
+.form-submit {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #8C3944;
+  font-size: 1.2em;
+  width: 100%; }
+  .form-submit:hover {
+    background: #b04856; }
 
 .card {
   margin: 20px 0;

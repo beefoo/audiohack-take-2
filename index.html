@@ -6,22 +6,24 @@
   <title>Audio Hack Take 2</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="/css/app.css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/normalize.css">
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
   <div class="container">
 
     <form id="form-message">
-      <label>Who are you sending this to?</label>
-      <input type="email" name="email" placeholder="Email Address" />
 
-      <label>A link to the podcast</label>
-      <input type="text" name="url" placeholder="URL of the podcast" />
+      <div class="form-input-group">
+        <input class="form-input" type="email" name="email" placeholder="Email" />
+        <label class="form-label" for="email">To:&nbsp;</label>
+      </div>
+
+      <div class="form-input-group">
+        <input class="form-input" type="text" name="url" placeholder="URL" />
+        <label class="form-label" for="url">Podcast:&nbsp;</label>
+      </div>
 
       <div id="preview"></div>
 
@@ -34,7 +36,12 @@
 
       <ul id="recordings" class="recordings"></ul>
 
-      <button type="submit" class="submit hide">Send!</button>
+      <div class="form-input-group">
+        <input class="form-input" type="text" name="from-name" placeholder="Email" />
+        <label class="form-label" for="from-name">From:&nbsp;</label>
+      </div>
+
+      <button class="form-submit hide" type="submit">Send!</button>
     </form>
 
   </div>
