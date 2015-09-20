@@ -1,3 +1,18 @@
+function doUpload(blob) { 
+    var fd = new FormData();
+    fd.append('waveData', blob);
+    $.ajax({
+        type: 'POST',
+        url: 'http://tal.mrawde.com/',
+        data: fd,
+        processData: false,
+        enctype: "multipart/form-data",
+        contentType: false
+    }).done(function(data) {
+        console.log(data);
+    });
+}
+
 (function() {
   var App;
 
@@ -114,6 +129,12 @@
       $('input[name="url"]').on('blur', function(){
         _this.lookupURL($(this).val());
       });
+
+      $('#form-message').submit(function(e) { 
+          e.preventDefault();
+          doUpload(_this.blob);
+          return false;
+      });
     };
 
     App.prototype.lookupURL = function(url){
@@ -153,6 +174,8 @@
       this.audioRecorder.exportWAV(function(blob){
         window.URL = window.URL || window.webkitURL;
         $('#audio-playback')[0].src = window.URL.createObjectURL(blob);
+
+        _this.blob = blob;
 
         _this.audioRecorder.getBuffers(function(buffers){
           _this.gotBuffers(buffers);
