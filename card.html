@@ -19,6 +19,8 @@
 
       <h1 class="message">You have a message from Alex</h1>
 
+      <img class="card-logo" src="img/logo_red.png"></img>
+
       <div class="player">
         <div id="jquery_jplayer_1" class="jp-jplayer"></div>
         <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -26,20 +28,15 @@
                 <div class="jp-type-playlist">
                   
                   <div class="jp-gui jp-interface">
-                     <button class="jp-controls jp-play" role="button" tabindex="0"><i class="fa fa-play-circle-o fa-5x"></i></button>
+                     <button class="jp-controls jp-play" role="button" tabindex="0"><i class="fa fa-play-circle-o fa-5x"></i></button> 
                      <div class="all-controls">
                       <div class="jp-controls">
-                      <button class="jp-previous" role="button" tabindex="0">
-                        <i class="fa fa-fast-backward"></i>
-                      </button>
-                     
-                      <button class="jp-next" role="button" tabindex="0">
-                        <i class="fa fa-fast-forward"></i>
-                      </button> <div class="jp-progress">
+                      <div class="jp-progress">
                       <div class="jp-seek-bar">
                         <div class="jp-play-bar"></div>
                       </div>
                     </div>
+
                     <div class="jp-volume-controls">
                       <button class="jp-mute" role="button" tabindex="0"><i class="fa fa-volume-off"></i></button>
                       <button class="jp-volume-max" role="button" tabindex="0"><i class="fa fa-volume-up"></i></button>
@@ -47,11 +44,21 @@
                         <div class="jp-volume-bar-value"></div>
                       </div>
                     </div>
+
                     <div class="jp-time-holder">
                       <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
                       <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
                     </div>
                   </div>
+
+                      <button class="jp-previous" role="button" tabindex="0">
+                        <i class="fa fa-fast-backward"></i>
+                      </button>
+                     
+                      <button class="jp-next" role="button" tabindex="0">
+                        <i class="fa fa-fast-forward"></i>
+                      </button>
+
                   <div class="jp-playlist">
                     </div>
              </div>
@@ -79,11 +86,6 @@
       <div class="podcast-info">
           <div class="podcast-title"><a href="#">{showTitle}</a></div>
           <div class="podcast-episode"><a href="#">{title}</a></div>
-        <div class="podcast-image">
-            <a href="{showUrl}"><img src="{img}" alt="{showTitle}"></a>
-        </div>
-        <div class="podcast-publish-date">Publish Date</div>
-        <div class="podcast-show-notes">Show Notes</div>
       </div>
 
       <div class="make-your-own">

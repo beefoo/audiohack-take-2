@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: "simplifica", sans-serif;
-  background: #def3ee;
+  background: whitesmoke;
   color: #230A1B; }
 
 p {
@@ -47,6 +47,9 @@ button,
   .button:hover {
     color: #fff;
     background: #def3ee; }
+
+.card-logo {
+  width: 300px; }
 
 /*Player Styles*/
 .player {
@@ -181,8 +184,11 @@ form {
   padding-left: 20px; }
 
 .podcast-info {
-  float: left;
-  margin: 100px auto; }
+  padding-top: 70px;
+  margin: 0 auto; }
+
+.make-your-own {
+  margin-top: 50px; }
 
 .record-area {
   position: relative;
@@ -205,8 +211,7 @@ form {
   .record-area.active button {
     background: #B9E5DA; }
     .record-area.active button:hover {
-      background: #def3ee;
-      content: 'Stop'; }
+      background: #def3ee; }
     .record-area.active button:before {
       content: 'Recording...'; }
   .record-area.active canvas {

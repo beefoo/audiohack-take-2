@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: "simplifica", sans-serif;
-  background: lighten($mint, 10%);
+  background: whitesmoke;
   color: $dark-red;
 }
 
@@ -60,6 +60,9 @@ button,
   }
 }
 
+.card-logo {
+  width: 300px;
+}
 
 /*Player Styles*/
 
@@ -209,8 +212,12 @@ form {
 }
 
 .podcast-info {
-  float: left;
-  margin: 100px auto;
+  padding-top: 70px;
+  margin: 0 auto;
+}
+
+.make-your-own {
+  margin-top: 50px;
 }
 
 .record-area {
@@ -243,7 +250,6 @@ form {
       background: $secondary;
       &:hover {
         background: lighten($secondary, 10%);
-        content: 'Stop';
       }
       &:before {
         content: 'Recording...';
