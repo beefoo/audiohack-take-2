@@ -4,7 +4,7 @@ $(document).ready(function(){
     //var prerollFile = "http://www.kozco.com/tech/piano2.wav";
     var prerollFile = $('body').data('preroll');
     var podcastFile = $('body').data('podcast');
-    var podcastImg = $('body').data('podcastImg');
+    var podcastImg = $('body').data('podcastimg');
   var preroll = {
     title: "Pre-Roll",
     wav: prerollFile
