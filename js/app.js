@@ -9,7 +9,8 @@ function doUpload(blob) {
         enctype: "multipart/form-data",
         contentType: false
     }).done(function(data) {
-        console.log(data);
+        //window.location = 'http://tal.mrawde.com/card';
+        window.location = 'http://tal.mrawde.com/card?' + $('#form-message').serialize();
     });
 }
 
@@ -138,7 +139,12 @@ function doUpload(blob) {
     };
 
     App.prototype.lookupURL = function(url){
-      $.getJSONP("http://knomad.parseapp.com/episodeLookUp", {link: url}, function(data) {
+      //var baseUrl = "http://knomad.parseapp.com/episodeLookUp";
+      // for now, we proxy this.  really we could be using .ajax with dataType
+      // "jsonp".  but this runs into another problem where the object returned
+      // has literal strings as their keys, which javasript does not like..
+      var baseUrl = "http://tal.mrawde.com/knomad";
+      $.getJSON(baseUrl, {link: url}, function(data) {
         var $el = $('<div class="card"><img src="'+data.showImageUrl+'" /><div class="title">'+data.episodeTitle+'</div></div>');
         $('#preview').append($el);
         // episodeAudioVideoUrl: "http://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/nerdist/Nerdist_725_-_Sir_Patrick_Stewart_Returns.mp3",
