@@ -1,3 +1,20 @@
+function doUpload(blob) {
+    var fd = new FormData();
+    fd.append('data', blob);
+    $.ajax({
+        type: 'POST',
+        url: 'http://tal.mrawde.com/',
+        data: fd,
+        processData: false,
+        contentType: false
+    }).done(function(data) {
+        var form = $('#form-message');
+        console.log(form);
+        window.location.href = 'http://tal.mrawde.com/card?' + form.serialize();
+        //console.log(data);
+    });
+}
+
 (function() {
   var App;
 
@@ -114,10 +131,18 @@
       $('input[name="url"]').on('blur', function(){
         _this.lookupURL($(this).val());
       });
+
+      $('#form-message').submit(function(e) {
+          doUpload(_this.blob);
+          e.preventDefault();
+          return false;
+      });
     };
 
     App.prototype.lookupURL = function(url){
-      $.getJSONP("http://knomad.parseapp.com/episodeLookUp", {link: url}, function(data) {
+        //var baseUrl = "http://knomad.parseapp.com/episodeLookUp";
+        var baseUrl = "http://tal.mrawde.com/knomad";
+      $.getJSON(baseUrl, {link: url}, function(data) {
         var $el = $('<div class="card"><img src="'+data.showImageUrl+'" /><div class="title">'+data.episodeTitle+'</div></div>');
         $('#preview').append($el);
         // episodeAudioVideoUrl: "http://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/nerdist/Nerdist_725_-_Sir_Patrick_Stewart_Returns.mp3",
@@ -154,12 +179,14 @@
         window.URL = window.URL || window.webkitURL;
         $('#audio-playback')[0].src = window.URL.createObjectURL(blob);
 
+        _this.blob = blob;
         _this.audioRecorder.getBuffers(function(buffers){
           _this.gotBuffers(buffers);
         });
       });
 
     };
+
 
     App.prototype.updateAnalysers = function(time) {
       var _this = this;
