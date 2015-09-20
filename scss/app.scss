@@ -228,24 +228,59 @@ form {
   .record-label {
     font-size: 0.8em;
     line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  #recordings {
+    button {
+      height: 120px;
+    }
+
+    .play,
+    #record {
+      background-color: transparent;
+      color: $marsala;
+      padding: 0;
+
+      &:hover {
+        background-color: transparent;
+        color: lighten($marsala, 10%);
+      }
+    }
+
+    .play {
+      display: none;
+      margin-left: 20px;
+    }
+  }
+
+  #recordings {
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 
   canvas {
-    opacity: 0.2;
+    opacity: 0;
   }
 
   &.active {
-    button {
-      background: $secondary;
-      &:hover {
-        background: lighten($secondary, 10%);
-      }
-      &:before {
-        content: 'Recording...';
-      }
-    }
     canvas {
       opacity: 1;
+    }
+    #record {
+      color: $red;
+    }
+  }
+}
+
+.form-submit {
+  &.inactive {
+    &:hover {
+      background-color: $marsala;
+      cursor: default;
     }
   }
 }
@@ -254,17 +289,16 @@ form {
   list-style: none;
   margin: 20px 0 0 0;
   padding: 0;
+}
 
-  li {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    @include clearfix();
-
-    &:last-child {
-      border-bottom: none;
-    }
+.landing {
+  .logo {
+    background-image: url("/img/logo_red.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 75px;
+    text-indent: -10000em;
+    width: 100%;
   }
 }

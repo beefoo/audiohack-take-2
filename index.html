@@ -9,10 +9,10 @@
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body class="landing">
 
   <div class="container">
-
+    <h1 class="logo">For Your Ears Only</h1>
     <form id="form-message">
 
       <div class="form-input-group">
@@ -35,12 +35,12 @@
 
       <div class="record-area">
         <canvas id="analyser" width="400" height="120"></canvas>
-        <button id="record"><i class="fa fa-microphone"></i></button>
+        <div id="recordings">
+          <button id="record"><i class="fa fa-microphone fa-2x"></i></button>
+          <button class="play"><i class="fa fa-play fa-2x"></i></button>
+        </div>
         <label class="record-label">Record an introduction to this episode</label>
       </div>
-
-
-      <ul id="recordings" class="recordings"></ul>
 
       <button class="form-submit inactive" type="submit">Send!</button>
     </form>

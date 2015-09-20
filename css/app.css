@@ -157,7 +157,6 @@ form {
   .form-submit:hover {
     background: #b04856; }
 
-<<<<<<< HEAD
 .card {
   margin: 20px 0;
   background: #ddd;
@@ -192,43 +191,54 @@ form {
 .make-your-own {
   margin-top: 50px; }
 
-=======
->>>>>>> 81596ca0370c8fac569a69617dd65abe97aa6a72
 .record-area {
   position: relative;
   text-align: center; }
   .record-area .record-label {
     font-size: 0.8em;
-    line-height: 1; }
+    line-height: 1;
+    margin-bottom: 20px; }
+  .record-area #recordings button {
+    height: 120px; }
+  .record-area #recordings .play,
+  .record-area #recordings #record {
+    background-color: transparent;
+    color: #8C3944;
+    padding: 0; }
+    .record-area #recordings .play:hover,
+    .record-area #recordings #record:hover {
+      background-color: transparent;
+      color: #b04856; }
+  .record-area #recordings .play {
+    display: none;
+    margin-left: 20px; }
+  .record-area #recordings {
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
   .record-area canvas {
-    opacity: 0.2; }
-  .record-area.active button {
-    background: #B9E5DA; }
-    .record-area.active button:hover {
-      background: #def3ee; }
-    .record-area.active button:before {
-      content: 'Recording...'; }
+    opacity: 0; }
   .record-area.active canvas {
     opacity: 1; }
+  .record-area.active #record {
+    color: #E5303C; }
+
+.form-submit.inactive:hover {
+  background-color: #8C3944;
+  cursor: default; }
 
 .recordings {
   list-style: none;
   margin: 20px 0 0 0;
   padding: 0; }
-  .recordings li {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc; }
-    .recordings li:before, .recordings li:after {
-      content: " ";
-      display: table; }
-    .recordings li:after {
-      clear: both;
-      visibility: hidden;
-      line-height: 0;
-      height: 0;
-      font-size: 0; }
-    .recordings li:last-child {
-      border-bottom: none; }
+
+.landing .logo {
+  background-image: url("/img/logo_red.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 75px;
+  text-indent: -10000em;
+  width: 100%; }

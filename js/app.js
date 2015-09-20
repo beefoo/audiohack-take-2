@@ -41,8 +41,10 @@ function doUpload(blob) {
     };
 
     App.prototype.gotBuffers = function(buffers) {
-      var $el = $('<li><div class="buttons"><button class="play"></button><button class="reset">Try Again</button></div></li>');
-      $('#recordings').empty().append($el);
+      $('#recordings .play').css('display', 'inline-block');
+      $('.record-label').text('Preview your recording or record another message.')
+      // var $el = $('<li><div class="landing-controls"></li>');
+      // $('#recordings').empty().append($el);
 
       //var canvas = $el.find('canvas')[0];
 
@@ -123,8 +125,7 @@ function doUpload(blob) {
 
       $('#recordings').on('click', '.reset', function(e){
         e.preventDefault();
-        $('#recordings').empty();
-        $('.submit').addClass('hide');
+        $('.form-submit').addClass('inactive');
       });
 
       $('input[name="url"]').on('blur', function(){
@@ -174,7 +175,7 @@ function doUpload(blob) {
     App.prototype.recordStop = function() {
       var _this = this;
 
-      $('.submit').removeClass('inactive');
+      $('.form-submit').removeClass('inactive');
 
       this.audioRecorder.stop();
       this.audioRecorder.exportWAV(function(blob){
