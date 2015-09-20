@@ -97,6 +97,36 @@ button,
     height: 10px;
 }
 
+.jp-gui {
+  margin-top: 240px;
+}
+
+.fa-fast-forward {
+   margin-left: 290px;
+}
+
+.fa-volume-up {
+  margin-left: 210px;
+}
+
+.jp-volume-bar {
+    height: 10px;
+    width: 50%;
+    background-color: lighten($marsala, 10%);
+    position: absolute;
+    bottom: 0px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+}
+
+.jp-current-time {
+  float: left;
+}
+
+.jp-duration {
+  float: right;
+}
+
 .all-controls {
   position: absolute;
   bottom: 0;
