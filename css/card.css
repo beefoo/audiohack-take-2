@@ -1,8 +1,12 @@
 .jp-audio {
 	width: 80%;
     background-color: black;
-    height: 100px;
-    padding: 10px;
+    height: 300px;
+    background-image: 
+    url('http://is1.mzstatic.com/image/thumb/Podcasts6/v4/04/a9/64/04a964d7-7c10-72d6-871b-97619cf89066/mza_1416781107029663068.jpg/600x600bb-85.jpg' );
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 .jp-progress {
@@ -11,10 +15,13 @@
     height: 10px;
 }
 
-.jp-seek-bar {
+.jp-play-bar {
 	background-color: red;
-    width: 10px;
     height: 10px;
+}
+
+.fa-pause {
+	display: none;
 }
 
 .jp-volume-max {
