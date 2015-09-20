@@ -1,18 +1,34 @@
 @import "mixins";
 @import "variables";
 
-@import "../css/vendor/normalize.css";
+@import "/css/vendor/normalize.css";
+@import "/css/vendor/font-awesome.min.css";
 @import "/css/vendor/font.css";
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
 
 body {
   font-family: "simplifica", sans-serif;
-  background: $floral;
+  background: lighten($mint, 10%);
 }
 
 p {
   font-size: 1.2em;
   line-height: 1.8;
 }
+
 a {
   color: $secondary;
   text-decoration: none;
@@ -107,10 +123,6 @@ form {
     display: block;
   }
 
-  label {
-    margin: 0.8em 0 0.5em;
-  }
-
   input, textarea {
     width: 100%;
     padding: 5px;
@@ -120,38 +132,48 @@ form {
     width: 100%;
     height: 120px;
   }
+}
 
-  button[type="submit"] {
-    font-size: 1.2em;
-    background: $green;
-    margin-top: 40px;
-    width: 540px;
-    margin-left: -30px;
-    @include border-radius(0);
-    -webkit-border-bottom-right-radius: 12px;
-    -webkit-border-bottom-left-radius: 12px;
-    -moz-border-radius-bottomright: 12px;
-    -moz-border-radius-bottomleft: 12px;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-    &:hover {
-      background: lighten($green, 10%);
-    }
-  }
+.container {
+  margin: 20px auto;
+  max-width: 1024px;
+  padding: 0 20px;
 }
 
 .hide {
   display: none;
 }
 
-.container {
-  width: 480px;
-  margin: 10px auto;
-  padding: 30px;
-  padding-bottom: 0;
-  background: $white;
-  @include border-radius(12px);
+.form-input-group {
   @include clearfix();
+}
+
+.form-label,
+.form-input {
+  float: right;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.form-input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid;
+  float: right;
+  margin-left: 10px;
+  outline: 0;
+  width: calc(100% - 100px);
+}
+
+.form-submit {
+  @include border-radius(5px);
+  background: $marsala;
+  font-size: 1.2em;
+  width: 100%;
+
+  &:hover {
+    background: lighten($marsala, 10%);
+  }
 }
 
 .card {
