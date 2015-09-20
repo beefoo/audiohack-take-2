@@ -66,7 +66,7 @@ button,
   width: 80%;
     background-color: white;
     height: 300px;
-    background-image: 
+    background-image:
     url('http://is1.mzstatic.com/image/thumb/Podcasts6/v4/04/a9/64/04a964d7-7c10-72d6-871b-97619cf89066/mza_1416781107029663068.jpg/600x600bb-85.jpg' );
     background-size: 300px 300px;
     background-repeat: no-repeat;
@@ -162,6 +162,7 @@ form {
   float: right;
   margin-left: 10px;
   outline: 0;
+  text-indent: 1px;
   width: calc(100% - 100px);
 }
 
@@ -176,41 +177,13 @@ form {
   }
 }
 
-.card {
-  margin: 20px 0;
-  background: #ddd;
-  padding: 10px;
-  @include clearfix();
-
-  img {
-    width: 60px;
-    height: auto;
-    float: left;
-  }
-  .title {
-    margin-left: 80px;
-  }
-}
-
 .record-area {
   position: relative;
   text-align: center;
 
-  button {
-    display: block;
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -100px;
-    margin-top: -36px;
-    background: $gray;
-    &:hover {
-      background: lighten($gray, 10%);
-    }
-    &:before {
-      content: '';
-    }
+  .record-label {
+    font-size: 0.8em;
+    line-height: 1;
   }
 
   canvas {
@@ -249,31 +222,6 @@ form {
 
     &:last-child {
       border-bottom: none;
-    }
-  }
-  canvas {
-    width: 100%;
-    float: left;
-    height: 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-  }
-  .buttons {
-    button {
-      display: inline-block;
-      margin-right: 10px;
-    }
-    .play {
-      background: $green;
-      &:hover {
-        background: lighten($green, 10%);
-      }
-      &:before {
-        content: 'Play';
-      }
-      &.active:before {
-        content: 'Playing...'
-      }
     }
   }
 }

@@ -41,12 +41,12 @@ function doUpload(blob) {
     };
 
     App.prototype.gotBuffers = function(buffers) {
-      var $el = $('<li><canvas></canvas><div class="buttons"><button class="play"></button><button class="reset">Try Again</button></div></li>');
+      var $el = $('<li><div class="buttons"><button class="play"></button><button class="reset">Try Again</button></div></li>');
       $('#recordings').empty().append($el);
 
-      var canvas = $el.find('canvas')[0];
+      //var canvas = $el.find('canvas')[0];
 
-      drawBuffer(canvas.width, canvas.height, canvas.getContext('2d'), buffers[0]);
+      //drawBuffer(canvas.width, canvas.height, canvas.getContext('2d'), buffers[0]);
 
       // audioRecorder.exportWAV(doneEncoding);
     };
