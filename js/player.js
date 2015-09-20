@@ -1,13 +1,16 @@
 //<![CDATA[
 $(document).ready(function(){
 
+    //var prerollFile = "http://www.kozco.com/tech/piano2.wav";
+    var prerollFile = $('body').data('preroll');
+    var podcastFile = $('body').data('podcast');
   var preroll = {
     title: "Pre-Roll",
-    wav: "http://www.kozco.com/tech/piano2.wav"
+    wav: prerollFile
   };
   var podcast = {
     title: "Podcast",
-    mp3: "http://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/nerdist/Nerdist_725_-_Sir_Patrick_Stewart_Returns.mp3"
+    mp3: podcastFile
   };
 
   new jPlayerPlaylist({
