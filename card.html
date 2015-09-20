@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="/css/vendor/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="/css/vendor/jplayer.blue.monday.css"> -->
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/css/normalize.css">
   </head>
-  <body>
+  <body
+      data-preroll="http://www.kozco.com/tech/piano2.wav"
+      data-podcastimg="http://is1.mzstatic.com/image/thumb/Podcasts6/v4/04/a9/64/04a964d7-7c10-72d6-871b-97619cf89066/mza_1416781107029663068.jpg/600x600bb-85.jpg"
+      data-podcast="http://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/nerdist/Nerdist_725_-_Sir_Patrick_Stewart_Returns.mp3"
+      >
     <div class="container">
 
       <h1 class="message">You have a message from Alex</h1>
@@ -73,18 +77,18 @@
       </div>
 
       <div class="podcast-info">
-        <div class="podcast-title"><a href="#">Podcast Title</a></div>
-        <div class="podcast-episode"><a href="#">Podcast Episode</a></div>
+          <div class="podcast-title"><a href="#">{showTitle}</a></div>
+          <div class="podcast-episode"><a href="#">{title}</a></div>
         <div class="podcast-image">
-          <a href="#"><img src="#" alt=""></a>
+            <a href="{showUrl}"><img src="{img}" alt="{showTitle}"></a>
         </div>
         <div class="podcast-publish-date">Publish Date</div>
         <div class="podcast-show-notes">Show Notes</div>
       </div>
 
       <div class="make-your-own">
-        <a href="/index.html"><i class="fa fa-microphone"></i></a>
-        <div class="link make-your-own-link"><a href="/index.html">Make Your Own</a></div>
+        <a href="/"><i class="fa fa-microphone"></i></a>
+        <div class="link make-your-own-link"><a href="/">Make Your Own</a></div>
       </div>
 
     </div>
