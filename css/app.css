@@ -18,17 +18,18 @@ html {
 
 body {
   font-family: "simplifica", sans-serif;
-  background: #def3ee; }
+  background: #def3ee;
+  color: #230A1B; }
 
 p {
   font-size: 1.2em;
   line-height: 1.8; }
 
 a {
-  color: #B9E5DA;
+  color: #230A1B;
   text-decoration: none; }
   a:active, a:hover {
-    color: #def3ee; }
+    color: #8C3944; }
   a:link, a:active, a:hover, a:visited {
     outline: 0; }
 
@@ -48,6 +49,9 @@ button,
     background: #def3ee; }
 
 /*Player Styles*/
+.player {
+  width: 50%; }
+
 .jp-audio {
   width: 80%;
   background-color: white;
@@ -69,6 +73,9 @@ button,
   height: 10px; }
 
 .all-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: none; }
 
 .jp-gui {
@@ -84,8 +91,6 @@ button,
   top: 36%;
   right: 40%;
   display: inherit; }
-  .fa-play-circle-o:hover {
-    background: none; }
 
 .fa-pause {
   display: none; }
@@ -167,6 +172,17 @@ form {
     float: left; }
   .card .title {
     margin-left: 80px; }
+
+.card-controls {
+  margin: 50px; }
+
+.subscribe, .more {
+  float: left;
+  padding-left: 20px; }
+
+.podcast-info {
+  float: left;
+  margin: 100px auto; }
 
 .record-area {
   position: relative;
