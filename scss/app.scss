@@ -66,6 +66,7 @@ button,
 
 .card-logo {
   width: 300px;
+  margin-bottom: 50px;
 }
 
 /*Player Styles*/
@@ -107,6 +108,10 @@ button,
 
 .fa-volume-up {
   margin-left: 210px;
+}
+
+.jp-playlist {
+  display: none;
 }
 
 .jp-volume-bar {
@@ -251,12 +256,13 @@ form {
 }
 
 .podcast-info {
-  padding-top: 70px;
+  padding-bottom: 20px;
   margin: 0 auto;
 }
 
 .make-your-own {
-  margin-top: 50px;
+  float: left;
+  margin-top: 80px;
 }
 
 .record-area {
