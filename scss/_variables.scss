@@ -12,12 +12,19 @@ $greenDark: #235612;
 $red: #E5303C;
 $gray: #999999;
 
+
+$mint: #B9E5DA;
+$floral: #FFF7EB;
+$seal: #230E11;
+$marsala: #8C3944;
+$sunset: #C04445;
+
 /* Site colors */
-$dark: $brown;
-$medium: $tan;
-$light: $beige;
-$secondary: $red;
-$secondaryLight: lighten($red, 10%);
+$dark: $seal;
+$medium: $marsala;
+$light: $floral;
+$secondary: $mint;
+$secondaryLight: lighten($mint, 10%);
 
 /* Breakpoints */
 $breakTiny: 480px;

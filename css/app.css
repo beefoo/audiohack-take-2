@@ -2,25 +2,26 @@
 /* Site colors */
 /* Breakpoints */
 @import url(../css/vendor/normalize.css);
+@import url(/css/vendor/font.css);
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  background: #333; }
+  font-family: "simplifica", sans-serif;
+  background: #FFF7EB; }
 
 p {
   font-size: 1.2em;
   line-height: 1.8; }
 
 a {
-  color: #E5303C;
+  color: #B9E5DA;
   text-decoration: none; }
   a:active, a:hover {
-    color: #eb5d67; }
+    color: #def3ee; }
   a:link, a:active, a:hover, a:visited {
     outline: 0; }
 
 button,
 .button {
-  background: #E5303C;
+  background: #B9E5DA;
   color: #fff;
   padding: 0.3em 0.6em;
   outline: 0;
@@ -31,7 +32,7 @@ button,
   button:hover,
   .button:hover {
     color: #fff;
-    background: #eb5d67; }
+    background: #def3ee; }
 
 form {
   font-size: 2em; }
@@ -123,9 +124,9 @@ form {
   .record-area canvas {
     opacity: 0.2; }
   .record-area.active button {
-    background: #E5303C; }
+    background: #B9E5DA; }
     .record-area.active button:hover {
-      background: #eb5d67;
+      background: #def3ee;
       content: 'Stop'; }
     .record-area.active button:before {
       content: 'Recording...'; }
@@ -170,5 +171,3 @@ form {
       content: 'Play'; }
     .recordings .buttons .play.active:before {
       content: "Playing..."; }
-
-/*# sourceMappingURL=app.css.map */
