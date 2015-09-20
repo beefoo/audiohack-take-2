@@ -3,39 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Demo : jPlayer as an audio playlist player</title>
+    <link rel="stylesheet" href="/css/app.css">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+     <script src="/js/player.js"></script>
+  <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
-    <script type="text/javascript">
-      //<![CDATA[
-      $(document).ready(function(){
 
-        var preroll = {
-          title: "Pre-Roll",
-          wav: "http://www.kozco.com/tech/piano2.wav"
-        };
-        var podcast = {
-          title: "Podcast",
-          mp3: "http://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/nerdist/Nerdist_725_-_Sir_Patrick_Stewart_Returns.mp3"
-        };
-
-        new jPlayerPlaylist({
-          jPlayer: "#jquery_jplayer_1",
-          cssSelectorAncestor: "#jp_container_1"
-          },
-          [preroll, podcast],
-          {
-            supplied: "mp3, wav",
-            wmode: "window",
-            useStateClassSkin: true,
-            autoBlur: false,
-            smoothPlayBar: true,
-            keyEnabled: true
-          });
-        });
-      //]]>
-    </script>
   </head>
   <body>
     <div id="jquery_jplayer_1" class="jp-jplayer"></div>
