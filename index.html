@@ -16,6 +16,11 @@
     <form id="form-message">
 
       <div class="form-input-group">
+        <input class="form-input" type="text" name="from-name" placeholder="Name" />
+        <label class="form-label" for="from-name">From:&nbsp;</label>
+      </div>
+
+      <div class="form-input-group">
         <input class="form-input" type="email" name="email" placeholder="Email" />
         <label class="form-label" for="email">To:&nbsp;</label>
       </div>
@@ -27,7 +32,7 @@
 
       <div id="preview"></div>
 
-      <label>Record a message</label>
+      <label>Record an introduction to this episode</label>
 
       <div class="record-area">
         <canvas id="analyser" width="400" height="120"></canvas>
@@ -36,12 +41,7 @@
 
       <ul id="recordings" class="recordings"></ul>
 
-      <div class="form-input-group">
-        <input class="form-input" type="text" name="from-name" placeholder="Email" />
-        <label class="form-label" for="from-name">From:&nbsp;</label>
-      </div>
-
-      <button class="form-submit hide" type="submit">Send!</button>
+      <button class="form-submit inactive" type="submit">Send!</button>
     </form>
 
   </div>
