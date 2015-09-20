@@ -20,56 +20,59 @@
 
       <img class="card-logo" src="img/logo_red.png"></img>
 
-      <div class="player">
+      <div class="podcast-info">
+          <div class="podcast-title"><a href="#">{showTitle}</a></div>
+          <div class="podcast-episode"><a href="#">{title}</a></div>
+      </div>
+
+            <div class="player">
         <div id="jquery_jplayer_1" class="jp-jplayer"></div>
         <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-            
-                <div class="jp-type-playlist">
-                  
-                  <div class="jp-gui jp-interface">
-                     <button class="jp-controls jp-play" role="button" tabindex="0"><i class="fa fa-play-circle-o fa-5x"></i></button> 
-                     <div class="all-controls">
-                      <div class="jp-controls">
-                      <div class="jp-progress">
-                      <div class="jp-seek-bar">
-                        <div class="jp-play-bar"></div>
-                      </div>
-                    </div>
-
-                    <div class="jp-volume-controls">
-                      <button class="jp-mute" role="button" tabindex="0"><i class="fa fa-volume-off"></i></button>
-                      <button class="jp-volume-max" role="button" tabindex="0"><i class="fa fa-volume-up"></i></button>
-                      <div class="jp-volume-bar">
-                        <div class="jp-volume-bar-value"></div>
-                      </div>
-                    </div>
-
-                    <div class="jp-time-holder">
-                      <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                      <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-                    </div>
-                  </div>
-
-                      <button class="jp-previous" role="button" tabindex="0">
-                        <i class="fa fa-fast-backward"></i>
-                      </button>
-                     
-                      <button class="jp-next" role="button" tabindex="0">
-                        <i class="fa fa-fast-forward"></i>
-                      </button>
-
-                  <div class="jp-playlist">
-                    </div>
-             </div>
-              <ul>
-              </ul>
+          <div class="jp-type-playlist">
+           <div class="background">   
+            <div class="jp-gui jp-interface">
+              <div class="jp-controls">
+                  <button class="jp-previous" role="button" tabindex="0">
+                    <i class="fa fa-fast-backward"></i>
+                  </button>
+                  <button class="jp-play" role="button" tabindex="0">
+                    <i class="fa fa-play-circle-o fa-5x"></i>
+                  </button>
+                  <button class="jp-next" role="button" tabindex="0">
+                    <i class="fa fa-fast-forward"></i>
+                  </button>
+              </div>
+              <div class="jp-progress">
+                <div class="jp-seek-bar">
+                  <div class="jp-play-bar"></div>
+                </div>
+              </div>
+              <div class="jp-volume-controls">
+                  <button class="jp-mute" role="button" tabindex="0">
+                    <i class="fa fa-volume-off"></i>
+                  </button>
+                  <button class="jp-volume-max" role="button" tabindex="0">
+                    <i class="fa fa-volume-up"></i>
+                  </button>
+                <div class="jp-volume-bar">
+                  <div class="jp-volume-bar-value"></div>
+                </div>
+              </div>
+              <div class="jp-time-holder">
+                <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+              </div>
             </div>
-            <div class="jp-no-solution">
-              <span>Update Required</span> To play the media you will need to update your browser.
+            <div class="jp-playlist">
             </div>
           </div>
-        </div>
-      </div>
+            <div class="jp-no-solution">
+              <span>Update Required</span>
+              To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+            </div>
+          </div>
+          </div>
+          </div>
 
       <div class="card-controls">
         <div class="subscribe">
@@ -82,13 +85,8 @@
         </div>
       </div>
 
-      <div class="podcast-info">
-          <div class="podcast-title"><a href="#">{showTitle}</a></div>
-          <div class="podcast-episode"><a href="#">{title}</a></div>
-      </div>
-
       <div class="make-your-own">
-        <a href="/"><i class="fa fa-microphone"></i></a>
+        <a href="/"><i class="fa fa-microphone fa-3x"></i></a>
         <div class="link make-your-own-link"><a href="/">Make Your Own</a></div>
       </div>
 
