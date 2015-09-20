@@ -128,7 +128,7 @@ form {
       background: lighten($gray, 10%);
     }
     &:before {
-      content: 'Record';
+      content: '';
     }
   }
 
@@ -141,6 +141,7 @@ form {
       background: $secondary;
       &:hover {
         background: lighten($secondary, 10%);
+        content: 'Stop';
       }
       &:before {
         content: 'Recording...';
