@@ -48,6 +48,9 @@ button,
     color: #fff;
     background: #def3ee; }
 
+.logo {
+  width: 40%; }
+
 .card-logo {
   width: 300px; }
 
@@ -81,7 +84,7 @@ button,
   width: 100%;
   display: none; }
 
-.jp-gui {
+.background {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -112,6 +115,9 @@ form {
   form canvas {
     width: 100%;
     height: 120px; }
+
+.fa-microphone {
+  color: #230A1B; }
 
 .container {
   margin: 20px auto;
@@ -157,7 +163,6 @@ form {
   .form-submit:hover {
     background: #b04856; }
 
-<<<<<<< HEAD
 .card {
   margin: 20px 0;
   background: #ddd;
@@ -192,8 +197,6 @@ form {
 .make-your-own {
   margin-top: 50px; }
 
-=======
->>>>>>> 81596ca0370c8fac569a69617dd65abe97aa6a72
 .record-area {
   position: relative;
   text-align: center; }
@@ -232,3 +235,5 @@ form {
       font-size: 0; }
     .recordings li:last-child {
       border-bottom: none; }
+
+/*# sourceMappingURL=app.css.map */

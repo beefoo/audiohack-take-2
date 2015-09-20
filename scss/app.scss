@@ -60,6 +60,10 @@ button,
   }
 }
 
+.logo {
+  width: 40%;
+}
+
 .card-logo {
   width: 300px;
 }
@@ -142,6 +146,10 @@ form {
     width: 100%;
     height: 120px;
   }
+}
+
+.fa-microphone {
+  color: $dark-red;
 }
 
 .container {
