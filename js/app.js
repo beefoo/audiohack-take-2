@@ -174,7 +174,7 @@ function doUpload(blob) {
     App.prototype.recordStop = function() {
       var _this = this;
 
-      $('.submit').removeClass('hide');
+      $('.submit').removeClass('inactive');
 
       this.audioRecorder.stop();
       this.audioRecorder.exportWAV(function(blob){
