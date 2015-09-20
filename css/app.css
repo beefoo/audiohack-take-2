@@ -41,7 +41,8 @@ form {
   form label {
     margin: 0.8em 0 0.5em; }
   form input, form textarea {
-    width: 100%; }
+    width: 100%;
+    padding: 5px; }
   form canvas {
     width: 100%;
     height: 120px; }
@@ -171,3 +172,5 @@ form {
       content: 'Play'; }
     .recordings .buttons .play.active:before {
       content: "Playing..."; }
+
+/*# sourceMappingURL=app.css.map */
