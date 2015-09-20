@@ -22,7 +22,8 @@ $(document).ready(function(){
       autoBlur: false,
       smoothPlayBar: true,
       keyEnabled: true
-    });
   });
-//]]>
 
+
+});
+//]]>
